@@ -8,7 +8,7 @@ Bot_url: https://discord.com/api/oauth2/authorize?client_id=887348240020832256&p
 Paste the above url in your browser and authorize to bot to operate in your server.
 
 # How to work the bot
-Use '$news' in the textbox of discord in any channel of the server you've given access to. The bot will show the top 5 news headlines from the Axios website.
+Type '$news' in the textbox of discord in any channel of the server you've given access to. The bot will show the top 5 news headlines from the Axios website.
 It also provides the url to each of those headlines, incase you want to read further.
 
 Have fun!
