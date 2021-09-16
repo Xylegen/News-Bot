@@ -37,4 +37,4 @@ async def on_message(message):
       await message.channel.send(f"{urls[i]}\n")
 
 client.run(TOKEN)
-hello
+
