@@ -15,8 +15,7 @@ def get_news():
   urls=[]
   for ar in article:
     titles.append(ar["title"])
-  for ra in article:
-    urls.append(ra["url"])
+    urls.append(ar["url"])
 
   return(titles,urls)
 
