@@ -3,16 +3,11 @@ import discord
 import requests
 import json
 
-#def get_quote():
- #response=requests.get("https://zenquotes.io/api/random")
- # json_data=json.loads(response.text)
- #quote=json_data[0]['q']+ " -" + json_data[0]['a']
-  #return(quote)
 
 def get_news():
   query={
     "sources": "Axios",
-    "apiKey": "920ba8c3f59e4e369c6f12e914800c6d"
+    "apiKey": os.environ['APIKEY']
   }
   response=requests.get("https://newsapi.org/v2/top-headlines", params=query)
   bbc_page=response.json()
@@ -25,8 +20,6 @@ def get_news():
     urls.append(ar["url"])
 
   return(titles,urls)
-
-
 
 client=discord.Client()
 TOKEN=os.environ['DISC_TOKEN']
