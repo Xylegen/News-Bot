@@ -2,6 +2,7 @@ import os
 import discord
 import requests
 import json
+from keep_awake import keep_awake
 
 def get_news():
   query={
@@ -23,7 +24,7 @@ client=discord.Client()
 TOKEN=os.environ['DISC_TOKEN']
 @client.event
 async def on_ready():
-  print('We have logged in as {0.user}'.format(client))
+  print(f'We have logged in as {client.user}')
 
 @client.event
 async def on_message(message):
@@ -34,6 +35,7 @@ async def on_message(message):
     for i in range(5):
       await message.channel.send(f"{i+1}. {results[i]}\n")
       await message.channel.send(f"{urls[i]}\n")
-
+      
+keep_awake()
 client.run(TOKEN)
 
